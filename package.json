@@ -1,0 +1,34 @@
+{
+  "name": "react-anaconda",
+  "version": "1.0.0",
+  "description": "A react library for conditionally wrapping react components and working with parents",
+  "main": "src/index.js",
+  "module": "es/index.js",
+  "repository": "https://github.com/mmckeaveney/react-anaconda",
+  "author": "Martin McKeaveney <martinmckeaveney@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "NODE_ENV=development parcel build src/index.js",
+    "start": "NODE_ENV=development parcel src/index.js",
+    "test": "jest spec -b --colors",
+    "test:watch": "jest spec -b --colors --watch"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^23.1.0",
+    "parcel-bundler": "^1.8.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "testRegex": "/spec/unit/.*(\\.(test|spec))?\\.jsx?$",
+    "setupTestFrameworkScriptFile": "<rootDir>/spec/setup.js"
+  }
+}
