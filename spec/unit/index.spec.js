@@ -43,6 +43,20 @@ describe('React Anaconda', () => {
 
       expect(wrapper.find('.wrapper')).toHaveLength(1);
     });
+
+    it('passes the childs props in the second argument of the child component', () => {
+      const wrap = jest.fn((children, props) => <div>{children}</div>);
+      const wrapper = shallow(
+        <Anaconda
+          when={props => props.shouldWrap && props.numPeople > 2}
+          wrap={wrap}
+        >
+          <span shouldWrap numPeople={3} />
+        </Anaconda>
+      );
+      expect(wrap.mock.calls[0][1]).toEqual({ shouldWrap: true, numPeople: 3 });
+    });
+
   });
 
   describe('if the when condition is false', () => {
