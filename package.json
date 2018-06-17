@@ -2,26 +2,36 @@
   "name": "react-anaconda",
   "version": "1.0.0",
   "description": "A react library for conditionally wrapping react components and working with parents",
-  "main": "src/index.js",
-  "module": "es/index.js",
+  "main": "dist/react-anaconda.js",
+  "module": "es/react-anaconda.js",
   "repository": "https://github.com/mmckeaveney/react-anaconda",
   "author": "Martin McKeaveney <martinmckeaveney@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=development parcel build src/index.js",
+    "build": "NODE_ENV=production rollup -c rollup.config.js",
     "start": "NODE_ENV=development parcel src/index.js",
     "test": "jest spec -b --colors",
     "test:watch": "jest spec -b --colors --watch"
   },
   "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^23.1.0",
-    "parcel-bundler": "^1.8.1",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "rollup": "^0.60.7",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-peer-deps-external": "^2.1.1",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify-es": "^0.0.1"
+  },
+  "peerDependencies": {
+    "react": "^0.14.9 || ^15.0.0 || ^16.0.0",
+    "react-dom": "^0.14.9 || ^15.0.0 || ^16.0.0"
   },
   "jest": {
     "moduleDirectories": [
@@ -30,5 +40,6 @@
     ],
     "testRegex": "/spec/unit/.*(\\.(test|spec))?\\.jsx?$",
     "setupTestFrameworkScriptFile": "<rootDir>/spec/setup.js"
-  }
+  },
+  "dependencies": {}
 }
