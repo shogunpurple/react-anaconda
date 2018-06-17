@@ -36,7 +36,7 @@ return child;
 
 ```
 
-**react-anaconda** is a small library with utilities for: 
+**react-anaconda** is a tiny (515 bytes) library with utilities for: 
 - conditionally wrapping react components
 - Implicit prop sharing across children 
 
@@ -98,7 +98,7 @@ class BasicBooleanExample extends Component {
 ReactDOM.render(<BasicBooleanExample />, document.querySelector('.foo'));
 ```
 
-#### Returned Markup
+#### Rendered Markup
 ```html
   <a href="http://cool-url.com"> <span> Click me! </span> </a>
   <a href="http://cool-url.com"> <span> And me! </span> </a>
@@ -261,22 +261,43 @@ ReactDOM.render(<PropShareExample />, document.querySelector('.foo'));
 ### When
 `Boolean | (props: Object) => Boolean`
 
+- The when prop can either be a boolean or a function. 
+
+- If a boolean is passed and is true, children will be wrapped. 
+
+- You can also pass a function to the `when` prop. This function will be used as a predicate and passed each childs props as an argument. If the childs props match the predicate, that child will be wrapped.
+
 ### Wrap
 `(children: JSX.Element, props: Object) => JSX.Element`
+
+- Wrap is a render prop allowing which has 2 arguments. 
+- The first `children` argument is the component that will be wrapped. 
+- The second `props` argument is the props of the component to be wrapped as an object. 
+- You should return JSX from this function.
 
 ## Development
 
 Clone the repo and install dependencies with your favourite package manager. The NPM scripts in the `package.json` are below.
 
-* `build:minified` => builds and minifies the code and outputs a production ready bundle
-* `clean` => blows away build folders (`lib`, `dist`) for a clean build
+* `build` => builds and minifies the code and outputs a production ready bundle
+* `clean` => blows away build folders (`es`, `dist`) for a clean build
 * `dev` => runs a `parcel` development server with hot reloading for development. Access the development playground at `localhost:1234`  
-* `prepublish` => runs `prepublish:compile` when executing a `npm publish`
-* `prepublish:compile` => run `clean`, `transpile` and then `build:minified`
+* `prepublishOnly` => runs `prepublish:compile` when executing a `npm publish`
+* `prepublish:compile` => run `test`, `clean` then `build`
 * `test` => runs the jest test suite.
 * `test:watch` => run `test` in `watch` mode, which will re-run when you change files pertaining to your tests.
-* `test:update` => run `test`, but update outdated jest snapshots  
-* `transpile` => transpile all files in `src` into the `lib` folder using babel
 * `contributors:add` => add a contributor to the all-contributorsrc. For example: `npm run contributors:add -- yourusername`. You can then select your contributions.
 * `contributors:generate` => generate the new allcontributors file before checking in.
 * `contributors:check` => check that the all-contributorsrc reflects all the people who have actually contributed to the project on github.
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars1.githubusercontent.com/u/11256663?v=4" width="100px;"/><br /><sub><b>Martin McKeaveney</b></sub>](https://github.com/mmckeaveney)<br />[💻](https://github.com/mmckeaveney/react-anaconda/commits?author=mmckeaveney "Code") [📖](https://github.com/mmckeaveney/react-anaconda/commits?author=mmckeaveney "Documentation") [💡](#example-mmckeaveney "Examples") [🤔](#ideas-mmckeaveney "Ideas, Planning, & Feedback") [🚇](#infra-mmckeaveney "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/mmckeaveney/react-anaconda/commits?author=mmckeaveney "Tests") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

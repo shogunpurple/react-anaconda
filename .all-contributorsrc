@@ -1,0 +1,27 @@
+{
+  "projectName": "react-anaconda",
+  "projectOwner": "mmckeaveney",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "mmckeaveney",
+      "name": "Martin McKeaveney",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11256663?v=4",
+      "profile": "https://github.com/mmckeaveney",
+      "contributions": [
+        "code",
+        "doc",
+        "example",
+        "ideas",
+        "infra",
+        "test"
+      ]
+    }
+  ]
+}
