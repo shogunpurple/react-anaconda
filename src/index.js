@@ -1,6 +1,8 @@
 import React from 'react';
 
-export default ({ when, wrap = (children) => children, children, ...rest }) => {
+const defaultWrap = (children) => children;
+
+export default ({ when, wrap = defaultWrap, children, ...rest }) => {
   const Container = React.Fragment || React.createElement('div');
 
   return (
