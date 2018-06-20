@@ -296,8 +296,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars1.githubusercontent.com/u/11256663?v=4" width="100px;"/><br /><sub><b>Martin McKeaveney</b></sub>](https://github.com/mmckeaveney)<br />[💻](https://github.com/mmckeaveney/react-anaconda/commits?author=mmckeaveney "Code") [📖](https://github.com/mmckeaveney/react-anaconda/commits?author=mmckeaveney "Documentation") [💡](#example-mmckeaveney "Examples") [🤔](#ideas-mmckeaveney "Ideas, Planning, & Feedback") [🚇](#infra-mmckeaveney "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/mmckeaveney/react-anaconda/commits?author=mmckeaveney "Tests") |
-| :---: |
+| [<img src="https://avatars1.githubusercontent.com/u/11256663?v=4" width="100px;"/><br /><sub><b>Martin McKeaveney</b></sub>](https://github.com/mmckeaveney)<br />[💻](https://github.com/mmckeaveney/react-anaconda/commits?author=mmckeaveney "Code") [📖](https://github.com/mmckeaveney/react-anaconda/commits?author=mmckeaveney "Documentation") [💡](#example-mmckeaveney "Examples") [🤔](#ideas-mmckeaveney "Ideas, Planning, & Feedback") [🚇](#infra-mmckeaveney "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/mmckeaveney/react-anaconda/commits?author=mmckeaveney "Tests") | [<img src="https://avatars0.githubusercontent.com/u/2855748?v=4" width="100px;"/><br /><sub><b>Daniel Skelton</b></sub>](https://github.com/dskelton-r7)<br />[💻](https://github.com/mmckeaveney/react-anaconda/commits?author=dskelton-r7 "Code") [⚠️](https://github.com/mmckeaveney/react-anaconda/commits?author=dskelton-r7 "Tests") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

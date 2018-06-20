@@ -22,6 +22,16 @@
         "infra",
         "test"
       ]
+    },
+    {
+      "login": "dskelton-r7",
+      "name": "Daniel Skelton",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2855748?v=4",
+      "profile": "https://github.com/dskelton-r7",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ]
 }
