@@ -88,4 +88,19 @@ describe('React Anaconda', () => {
       });
     });
   });
+
+  describe('When the wrap prop is omitted', () => {
+    it('Its children should be rendered without being wrapped', () => {
+      const wrapper = shallow(
+        <Anaconda
+          when={true}
+        >
+          <span />
+        </Anaconda>
+      );
+
+      expect(wrapper.find('span').exists()).toEqual(true);
+    });
+  });
+  
 });
