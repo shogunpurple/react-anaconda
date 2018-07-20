@@ -103,4 +103,32 @@ describe('React Anaconda', () => {
     });
   });
   
+  describe('When a child is wrapped and extra props are supplied', () => {
+    it('Its children should be passed the extra props instead of the wrapped element', () => {
+
+      const NameBar = ({ name, bar }) => <span>{name}:{bar}</span>;
+
+      const BarName = ({ name, bar }) => <span>{bar}:{name}</span>;
+
+      const wrapper = shallow(
+        <Anaconda
+          when={(props) => props.clickable}
+          wrap={(children) => <a href="http://cool-url.com">{children}</a>}
+          name="foo"
+          bar={5}
+      > 
+        <NameBar clickable />
+        <BarName />
+      </Anaconda>
+      );
+
+      expect(wrapper.find(NameBar).exists()).toEqual(true);
+      expect(wrapper.find(NameBar).props()).toEqual({ clickable: true, name: "foo", bar: 5 });
+
+      expect(wrapper.find(BarName).exists()).toEqual(true);
+      expect(wrapper.find(BarName).props()).toEqual({ name: "foo", bar: 5 });
+
+    });
+  });
+  
 });

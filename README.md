@@ -95,7 +95,7 @@ class BasicBooleanExample extends Component {
   }
 }
 
-ReactDOM.render(<BasicBooleanExample />, document.querySelector('.foo'));
+ReactDOM.render(<BasicBooleanExample clickable />, document.querySelector('.foo'));
 ```
 
 #### Rendered Markup
@@ -127,7 +127,8 @@ class MapBooleanExample extends Component {
 }
 
 ReactDOM.render(
-<MapBooleanExample 
+<MapBooleanExample
+  clickable
   linkNames={[
     'Click me!',
     'And me!',
@@ -235,7 +236,7 @@ class PropShareExample extends Component {
   render() {
     return (
       <Anaconda
-        when={this.props.clickable}
+        when={(props) => props.clickable}
         wrap={(children) => <a href="http://cool-url.com">{children}</a>}
         name="foo"
         bar={5}
