@@ -8,11 +8,19 @@ export default ({ when, wrap = defaultWrap, children, ...rest }) => {
   return (
     <Container>
       {React.Children.map(children, child => {
+
         if (
           typeof when === 'function' && when(child.props) ||
           when === true
         ) {
+
+          if (rest) {
+            child = React.cloneElement(child, rest);
+          }
+
           child = wrap(child, child.props);
+
+          return child;
         }
         return rest ? React.cloneElement(child, rest) : child;
       })}
