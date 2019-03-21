@@ -128,6 +128,7 @@ class MapBooleanExample extends Component {
 
 ReactDOM.render(
 <MapBooleanExample 
+  clickable
   linkNames={[
     'Click me!',
     'And me!',
